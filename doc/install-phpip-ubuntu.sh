@@ -20,7 +20,7 @@ echo "
 Getting phpIP from GitHub
 ********************************"
 cd /var/www/html
-git clone https://github.com/jjdejong/phpip.git phpip
+git clone https://github.com/wilcodan/phpip.git phpip
 cd phpip
 composer install
 cp .env.example .env
