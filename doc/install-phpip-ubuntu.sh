@@ -3,7 +3,7 @@ echo "
 ********************************
 Updating Ubuntu
 ********************************"
-add-apt-repository universe
+# add-apt-repository universe
 apt update
 apt -y upgrade
 echo "
@@ -27,10 +27,10 @@ cp .env.example .env
 php artisan key:generate
 php artisan config:clear
 cp doc/phpip.conf /etc/apache2/sites-enabled/
-chmod -R g+rw storage
-chmod -R g+rw bootstrap/cache
-chgrp -R www-data storage
-chgrp -R www-data bootstrap/cache
+sudo chmod -R g+rw storage
+sudo chmod -R g+rw bootstrap/cache
+sudo chgrp -R www-data storage
+sudo chgrp -R www-data bootstrap/cache
 service apache2 reload
 echo "
 ********************************
